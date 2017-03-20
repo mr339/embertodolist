@@ -1,0 +1,32 @@
+<h1>Tasks</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title Of Task</th>
+      <th>Due Date</th>
+      <th>Description</th>
+      <th>
+        <select onchange = {{action 'ok' value='target.value'}}>
+        <option value="gg">Descending Sort</option>
+        <option value="op">Ascending Sort</option>
+        </select>
+      </th>
+    </tr>
+  </thead>
+{{#each sortedReviews as |task|}}
+  <tbody>
+    <tr>
+      <td>{{#link-to 'tasks.edit' task.id}}{{task.title}}{{/link-to}}</td>
+      <td>{{format-date task.date}}</td>
+      <td>{{task.description}}</td>
+      <button {{action 'deleteTask' task.id}} class="btn btn-danger">Delete</button>
+    </tr>
+  </tbody>
+   {{/each}}
+</table>
+
+
+
+
+
+

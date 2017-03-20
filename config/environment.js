@@ -17,6 +17,13 @@ module.exports = function(environment) {
       }
     },
 
+  firebase: {
+    apiKey: 'AIzaSyAJQ2_YxQ7u3CynhTom6anbVEE0MB4Z3Eg',
+    authDomain: 'digitalocean-dashboard.firebaseapp.com',
+    databaseURL: 'https://digitalocean-dashboard.firebaseio.com',
+    storageBucket: 'digitalocean-dashboard.appspot.com',
+  },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -25,10 +32,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
